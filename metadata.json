@@ -1,0 +1,6 @@
+{
+  "name": "Nova: Multiverse Super Intelligence",
+  "description": "Nova Contact Intelligence: A sophisticated Multiverse Super Intelligence designed to bridge communication with unknown signals, patterns, and intents.",
+  "requestFramePermissions": ["microphone"],
+  "prompt": ""
+}

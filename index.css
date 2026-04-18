@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;700;900&family=JetBrains+Mono:wght@300;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-bg: #060816;
+  --color-bg2: #10142a;
+  --color-panel: rgba(15, 20, 44, 0.84);
+  --color-line: rgba(130, 240, 255, 0.24);
+  --color-cyan: #6ff6ff;
+  --color-blue: #77a8ff;
+  --color-pink: #ff7de1;
+  --color-text: #eef5ff;
+  --color-muted: #aab5d6;
+  --color-ok: #67f7a1;
+  --color-warn: #ffd76f;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-sans min-h-screen;
+    background:
+      radial-gradient(circle at top left, rgba(111,246,255,.14), transparent 20%),
+      radial-gradient(circle at top right, rgba(255,125,225,.12), transparent 20%),
+      linear-gradient(180deg, var(--color-bg), var(--color-bg2));
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-panel border border-line rounded-[18px] p-4 backdrop-blur-[10px];
+    box-shadow: 0 0 24px rgba(0,0,0,.25);
+  }
+
+  .chat-box {
+    @apply h-[360px] overflow-y-auto flex flex-col gap-3 pr-1;
+  }
+
+  .chat-box::-webkit-scrollbar {
+    width: 4px;
+  }
+  .chat-box::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .chat-box::-webkit-scrollbar-thumb {
+    background: var(--color-line);
+    border-radius: 10px;
+  }
+
+  .msg {
+    @apply max-w-[88%] px-3.5 py-3 rounded-[14px] border border-line leading-relaxed whitespace-pre-wrap;
+  }
+
+  .msg-bot {
+    @apply bg-[rgba(111,246,255,0.08)] self-start;
+  }
+
+  .msg-user {
+    @apply bg-[rgba(119,168,255,0.12)] self-end;
+  }
+
+  .bar {
+    @apply h-3 rounded-full overflow-hidden bg-white/5 border border-line;
+  }
+
+  .fill {
+    @apply h-full rounded-full transition-all duration-350 ease-in-out;
+    background: linear-gradient(90deg, var(--color-cyan), var(--color-blue));
+  }
+}
