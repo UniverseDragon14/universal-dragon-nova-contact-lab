@@ -1,20 +1,25 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Universal Dragon NOVA Contact Lab | Universal Dragon Aslam
 
-# Run and deploy your AI Studio app
+Universal Dragon NOVA Contact Lab is part of the Universal Dragon public project family by Aslam.
 
-This contains everything you need to run your app locally.
+Creator: Aslam  
+Project Identity: Universal Dragon  
+Core Identity: NOVA / EVE  
+GitHub: https://github.com/UniverseDragon14  
+Website: https://universedragon14.github.io/
 
-View your app in AI Studio: https://ai.studio/apps/64bc5d1d-b468-4e3f-bda1-334961a81552
+## NOVA Contact Lab
+
+This repository supports the Universal Dragon / NOVA / EVE direction with public experimentation around contact, communication, assistant behavior, AI workflows, and practical system design.
+
+Keywords: Universal Dragon, Universal Dragon Aslam, Aslam, NOVA, EVE, UDOS, NOVA Contact Lab, AI, assistant system, automation, Raspberry Pi, robotics, system design.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+2. Set the `GEMINI_API_KEY` in `.env.local` to your Gemini API key
 3. Run the app:
    `npm run dev`
