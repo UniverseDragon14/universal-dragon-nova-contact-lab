@@ -35,6 +35,9 @@ jobs:
         env:
           GEMINI_API_KEY: PUBLIC_DEMO_DISABLED
 
+      - name: Keep Pages build clean
+        run: touch dist/.nojekyll
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
