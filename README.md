@@ -6,7 +6,7 @@ Creator: Aslam
 Project Identity: Universal Dragon  
 Core Identity: NOVA / EVE  
 GitHub: https://github.com/UniverseDragon14  
-Website: https://universedragon14.github.io/
+Website: https://universaldragon.com
 
 ## NOVA Contact Lab
 
