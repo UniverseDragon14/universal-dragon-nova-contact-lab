@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universal Dragon // Research Initiative</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universal Dragon Core | NOVA</title>
+  <meta name="description" content="Universal Dragon NOVA cinematic web interface by Aslam. AI, robotics, systems, safe autonomy, and practical system design." />
+  <meta name="author" content="Aslam / Universal Dragon" />
+  <style>
+    :root{
+      --bg:#06161b;--panel:rgba(12,34,48,.68);--panel2:rgba(24,64,88,.46);--line:rgba(73,218,255,.32);
+      --cyan:#31e7ff;--cyan2:#8ff7ff;--gold:#ffd47a;--text:#eaffff;--muted:#8fb9c4;--green:#1dff9b;
+      --shadow:0 0 40px rgba(49,231,255,.18), inset 0 0 28px rgba(49,231,255,.06);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{min-height:100vh;color:var(--text);font-family:Arial,Helvetica,sans-serif;background:#031015;overflow-x:hidden;line-height:1.55}
+    body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 50% 24%,rgba(49,231,255,.22),transparent 31%),radial-gradient(circle at 50% 55%,rgba(83,60,180,.18),transparent 30%),linear-gradient(180deg,#061b22,#06151a 48%,#041116);z-index:-3}
+    body:after{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(49,231,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(49,231,255,.045) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(circle at 50% 35%,#000 0%,transparent 78%);z-index:-2}
+    .scan{position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.025) 1px,transparent 3px,transparent 7px);opacity:.34;z-index:-1}.wrap{width:min(94vw,760px);margin:0 auto;padding:22px 0 120px}.topgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 auto 12px;width:min(520px,100%)}
+    .topbox,.status,.card,.chat,.tech,.dock{border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,var(--panel),rgba(5,18,28,.65));box-shadow:var(--shadow);backdrop-filter:blur(12px)}.topbox{padding:12px 16px;font-size:12px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase}.topbox b{display:block;color:var(--cyan);letter-spacing:0;text-transform:none;margin-top:2px}.status{width:min(520px,100%);margin:0 auto 88px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:12px;text-align:center}.status small{display:block;color:var(--muted);font-size:9px;letter-spacing:.18em}.status strong{display:block;color:var(--cyan);font-family:monospace;font-size:13px}.green{color:var(--green)}
+    .hero{text-align:center;position:relative}.title{font-size:clamp(30px,7vw,50px);letter-spacing:.18em;font-weight:900;line-height:1.2;text-transform:uppercase}.title span{display:block;color:var(--gold);letter-spacing:.22em}.pill{display:inline-flex;border:1px solid var(--line);border-radius:999px;color:var(--cyan);padding:6px 18px;margin:18px 0 10px;font-size:11px;letter-spacing:.28em;background:rgba(49,231,255,.08)}
+    .core{width:min(280px,64vw);aspect-ratio:1;border-radius:50%;margin:8px auto 18px;position:relative;border:1px solid rgba(49,231,255,.45);box-shadow:0 0 0 10px rgba(49,231,255,.04),0 0 60px rgba(49,231,255,.36),inset 0 0 55px rgba(49,231,255,.2);background:radial-gradient(circle,rgba(49,231,255,.18),rgba(49,231,255,.04) 55%,transparent 70%);overflow:hidden}.core:before{content:"";position:absolute;inset:18px;border-radius:50%;border:1px dashed rgba(143,247,255,.38);animation:spin 18s linear infinite}.core:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(49,231,255,.18),transparent);animation:pulse 2.8s ease-in-out infinite}@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{opacity:.38}}
+    .side{position:absolute;top:220px;width:118px;padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(7,28,40,.76);box-shadow:var(--shadow);font-size:12px}.side.left{left:0;text-align:left}.side.right{right:0;text-align:right}.side h3{color:var(--cyan);font-size:13px;line-height:1.1;text-transform:uppercase}.side b{display:block;color:white;font-size:24px;margin:4px 0}.side p{color:var(--muted);font-size:11px}.intro{margin:24px auto 28px;border:1px solid var(--line);border-radius:22px;background:rgba(10,31,45,.72);box-shadow:var(--shadow);padding:24px;color:var(--muted);text-align:center}.intro b{color:white}.tags{color:var(--cyan);font-weight:800;letter-spacing:.08em}.chat{padding:24px;border-radius:28px;margin-top:28px;background:linear-gradient(180deg,rgba(36,50,97,.55),rgba(8,25,42,.82))}.chat h2{text-align:center;font-size:clamp(28px,6vw,42px);letter-spacing:.18em}.chat .sub{text-align:center;color:var(--muted);font-size:11px;letter-spacing:.24em;margin-bottom:18px}.screen{min-height:190px;border-radius:22px;background:rgba(5,15,31,.74);border:1px solid rgba(143,247,255,.16);padding:22px;color:#dff7ff;margin-bottom:16px}.msg{margin-bottom:12px}.msg.user{text-align:right;color:var(--gold)}textarea{width:100%;min-height:96px;border-radius:22px;border:1px solid var(--line);background:rgba(3,16,27,.88);color:var(--text);padding:18px;font-size:17px;outline:none;resize:vertical}button{border:1px solid var(--line);background:linear-gradient(135deg,rgba(49,231,255,.35),rgba(91,88,180,.35));color:white;border-radius:999px;padding:13px 18px;font-weight:800;cursor:pointer;box-shadow:var(--shadow)}.send{margin-top:-30px;margin-left:10px;width:48px;height:48px;padding:0}.buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.utility{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.utility button{font-size:13px}.log{margin:20px 0;border-radius:12px;border-left:3px solid var(--cyan);background:rgba(0,0,0,.35);padding:12px 18px;color:var(--cyan);font-family:monospace;font-size:12px}.tech{padding:24px;margin-top:20px;text-align:center}.tech h2{color:var(--cyan);letter-spacing:.25em;font-size:18px;margin-bottom:14px}.techgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.techitem{padding:18px;border:1px solid rgba(49,231,255,.2);border-radius:16px;background:rgba(49,231,255,.06);color:var(--muted)}.techitem b{display:block;color:white}.dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);width:min(520px,88vw);display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:10px;background:rgba(9,30,42,.82);z-index:5}.dock a{color:white;text-decoration:none;text-align:center;border:1px solid rgba(143,247,255,.18);border-radius:18px;padding:12px 6px;font-size:11px;text-transform:uppercase}.dock a:first-child{background:rgba(49,231,255,.14);color:var(--cyan)}
+    @media(max-width:680px){.status{margin-bottom:68px}.side{position:static;width:100%;margin:10px 0;text-align:center!important}.topgrid{grid-template-columns:1fr}.buttons,.techgrid{grid-template-columns:1fr}.title{letter-spacing:.12em}.wrap{padding-top:16px}}
+  </style>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+  <div class="scan"></div>
+  <main class="wrap" id="home">
+    <section class="topgrid">
+      <div class="topbox">⚡ GitHub <b>@UniverseDragon14</b></div>
+      <div class="topbox">🌐 NOVA Web <b>nova.universaldragon.com</b></div>
+    </section>
+    <section class="status">
+      <div><small>CORE</small><strong><span class="green">●</span> ONLINE</strong></div>
+      <div><small>UPTIME</small><strong id="uptime">00:00:00</strong></div>
+      <div><small>BUILD</small><strong>V4</strong></div>
+      <div><small>LATENCY</small><strong id="latency">12ms</strong></div>
+    </section>
+    <section class="hero">
+      <h1 class="title">Universal Dragon <span>Core</span></h1>
+      <div class="pill">NOVA SYSTEM // CINEMATIC CHAT</div>
+      <div class="side left"><h3>Universal<br>Dragon</h3><b>ASLAM</b><p>UAE AI Developer<br>Real System Designer<br>Robotics Builder</p></div>
+      <div class="core"></div>
+      <div class="side right"><h3>NOVA</h3><b>CORE</b><p>AI Systems<br>Self-Healing Code<br>Safe Autonomy</p></div>
+      <p>🇦🇪 Abu Dhabi, UAE · <span class="tags">AI · Robotics · Systems</span></p>
+      <div class="intro"><b>Universal Dragon Aslam</b> is the public identity for Aslam’s UAE-based technology work from Abu Dhabi, focused on artificial intelligence, robotics, Raspberry Pi systems, automation, web development, ethical security learning, and practical system design.</div>
+    </section>
+    <section class="chat" id="nova">
+      <h2>💬 NOVA CHAT</h2>
+      <div class="sub">ROUND GLASS CORE · REAL API READY</div>
+      <div class="screen" id="screen"><div class="msg">Security நல்லா இருக்கு - strong encryption, regular audits, multi-factor authentication, மற்றும் continuous monitoring. Any specific concern?</div></div>
+      <textarea id="input" placeholder="Ask NOVA..."></textarea>
+      <button class="send" onclick="sendNova()">➤</button>
+      <div class="buttons"><button onclick="quick('/health')">/health</button><button onclick="quick('/model')">/model</button><button onclick="quick('/mission')">/mission</button><button onclick="quick('/guardian')">/guardian</button><button onclick="quick('/rules')">/rules</button><button onclick="quick('/learn')">/learn</button></div>
+      <div class="utility"><button id="auto">🔊 Auto: ON</button><button onclick="speakLast()">🗣 Speak Last</button><button onclick="voice()">🎙 Mic</button><button onclick="stopSpeak()">⏹ Stop</button><button onclick="copyLast()">📋 Copy Last</button><button onclick="copyChat()">📋 Copy Chat</button></div>
+    </section>
+    <div class="log">&gt; NOVA cinematic interface loaded...</div>
+    <section class="tech" id="projects"><h2>✥ TECH STACK ✥</h2><div class="techgrid"><div class="techitem">🐍<b>Python</b>Backend ready</div><div class="techitem">🤖<b>AI Core</b>API bridge ready</div><div class="techitem">🔧<b>Rollback</b>Safe repair design</div></div></section>
+  </main>
+  <nav class="dock"><a href="#home">🏠<br>Home</a><a href="#nova">💬<br>NOVA</a><a href="#projects">📁<br>Projects</a><a href="https://universedragon14.github.io/" target="_blank">⚙️<br>Expertise</a></nav>
+  <script>
+    const start=Date.now();let last='';
+    setInterval(()=>{const s=Math.floor((Date.now()-start)/1000);uptime.textContent=String(Math.floor(s/3600)).padStart(2,'0')+':'+String(Math.floor(s%3600/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');latency.textContent=(10+Math.floor(Math.random()*18))+'ms'},1000);
+    function reply(q){q=q.toLowerCase();if(q.includes('health'))return 'NOVA health: Core online, UI stable, rollback mindset active.';if(q.includes('model'))return 'Model layer: API-ready shell. Static safe mode running now.';if(q.includes('mission'))return 'Mission: help Aslam build real AI, robotics, systems, and useful tools step by step.';if(q.includes('guardian'))return 'Guardian: approval-first actions, no harmful operations, backup before risky change.';if(q.includes('rules'))return 'Rules: ask approval, protect data, keep logs, validate, rollback, then learn.';if(q.includes('learn'))return 'Learning mode: observe pattern, save useful memory, improve next action.';return 'NOVA received: '+q+'. I can turn this into a safe plan, code, or system step.'}
+    function add(t,c=''){screen.innerHTML+='<div class="msg '+c+'">'+t.replace(/[<>&]/g,m=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[m]))+'</div>';screen.scrollTop=screen.scrollHeight;last=t}
+    function sendNova(){const v=input.value.trim();if(!v)return;add(v,'user');input.value='';setTimeout(()=>add(reply(v)),250)}
+    function quick(v){input.value=v;sendNova()}input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendNova()}})
+    function speakLast(){if(!last)return;speechSynthesis.cancel();speechSynthesis.speak(new SpeechSynthesisUtterance(last))}function stopSpeak(){speechSynthesis.cancel()}function copyLast(){navigator.clipboard.writeText(last||'')}function copyChat(){navigator.clipboard.writeText(screen.innerText)}
+    function voice(){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){add('Voice not supported in this browser.');return}const r=new SR();r.lang='en-US';r.onresult=e=>{input.value=e.results[0][0].transcript};r.start()}
+  </script>
 </body>
 </html>
