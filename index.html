@@ -19,8 +19,8 @@
     .topbox,.status,.card,.chat,.tech,.dock{border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,var(--panel),rgba(5,18,28,.65));box-shadow:var(--shadow);backdrop-filter:blur(12px)}.topbox{padding:12px 16px;font-size:12px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase}.topbox b{display:block;color:var(--cyan);letter-spacing:0;text-transform:none;margin-top:2px}.status{width:min(520px,100%);margin:0 auto 88px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:12px;text-align:center}.status small{display:block;color:var(--muted);font-size:9px;letter-spacing:.18em}.status strong{display:block;color:var(--cyan);font-family:monospace;font-size:13px}.green{color:var(--green)}
     .hero{text-align:center;position:relative}.title{font-size:clamp(30px,7vw,50px);letter-spacing:.18em;font-weight:900;line-height:1.2;text-transform:uppercase}.title span{display:block;color:var(--gold);letter-spacing:.22em}.pill{display:inline-flex;border:1px solid var(--line);border-radius:999px;color:var(--cyan);padding:6px 18px;margin:18px 0 10px;font-size:11px;letter-spacing:.28em;background:rgba(49,231,255,.08)}
     .core{width:min(280px,64vw);aspect-ratio:1;border-radius:50%;margin:8px auto 18px;position:relative;border:1px solid rgba(49,231,255,.45);box-shadow:0 0 0 10px rgba(49,231,255,.04),0 0 60px rgba(49,231,255,.36),inset 0 0 55px rgba(49,231,255,.2);background:radial-gradient(circle,rgba(49,231,255,.18),rgba(49,231,255,.04) 55%,transparent 70%);overflow:hidden}.core:before{content:"";position:absolute;inset:18px;border-radius:50%;border:1px dashed rgba(143,247,255,.38);animation:spin 18s linear infinite}.core:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(49,231,255,.18),transparent);animation:pulse 2.8s ease-in-out infinite}@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{opacity:.38}}
-    .side{position:absolute;top:220px;width:118px;padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(7,28,40,.76);box-shadow:var(--shadow);font-size:12px}.side.left{left:0;text-align:left}.side.right{right:0;text-align:right}.side h3{color:var(--cyan);font-size:13px;line-height:1.1;text-transform:uppercase}.side b{display:block;color:white;font-size:24px;margin:4px 0}.side p{color:var(--muted);font-size:11px}.intro{margin:24px auto 28px;border:1px solid var(--line);border-radius:22px;background:rgba(10,31,45,.72);box-shadow:var(--shadow);padding:24px;color:var(--muted);text-align:center}.intro b{color:white}.tags{color:var(--cyan);font-weight:800;letter-spacing:.08em}.chat{padding:24px;border-radius:28px;margin-top:28px;background:linear-gradient(180deg,rgba(36,50,97,.55),rgba(8,25,42,.82))}.chat h2{text-align:center;font-size:clamp(28px,6vw,42px);letter-spacing:.18em}.chat .sub{text-align:center;color:var(--muted);font-size:11px;letter-spacing:.24em;margin-bottom:18px}.screen{min-height:190px;border-radius:22px;background:rgba(5,15,31,.74);border:1px solid rgba(143,247,255,.16);padding:22px;color:#dff7ff;margin-bottom:16px}.msg{margin-bottom:12px}.msg.user{text-align:right;color:var(--gold)}textarea{width:100%;min-height:96px;border-radius:22px;border:1px solid var(--line);background:rgba(3,16,27,.88);color:var(--text);padding:18px;font-size:17px;outline:none;resize:vertical}button{border:1px solid var(--line);background:linear-gradient(135deg,rgba(49,231,255,.35),rgba(91,88,180,.35));color:white;border-radius:999px;padding:13px 18px;font-weight:800;cursor:pointer;box-shadow:var(--shadow)}.send{margin-top:-30px;margin-left:10px;width:48px;height:48px;padding:0}.buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.utility{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.utility button{font-size:13px}.log{margin:20px 0;border-radius:12px;border-left:3px solid var(--cyan);background:rgba(0,0,0,.35);padding:12px 18px;color:var(--cyan);font-family:monospace;font-size:12px}.tech{padding:24px;margin-top:20px;text-align:center}.tech h2{color:var(--cyan);letter-spacing:.25em;font-size:18px;margin-bottom:14px}.techgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.techitem{padding:18px;border:1px solid rgba(49,231,255,.2);border-radius:16px;background:rgba(49,231,255,.06);color:var(--muted)}.techitem b{display:block;color:white}.dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);width:min(520px,88vw);display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:10px;background:rgba(9,30,42,.82);z-index:5}.dock a{color:white;text-decoration:none;text-align:center;border:1px solid rgba(143,247,255,.18);border-radius:18px;padding:12px 6px;font-size:11px;text-transform:uppercase}.dock a:first-child{background:rgba(49,231,255,.14);color:var(--cyan)}
-    @media(max-width:680px){.status{margin-bottom:68px}.side{position:static;width:100%;margin:10px 0;text-align:center!important}.topgrid{grid-template-columns:1fr}.buttons,.techgrid{grid-template-columns:1fr}.title{letter-spacing:.12em}.wrap{padding-top:16px}}
+    .side{position:absolute;top:220px;width:118px;padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(7,28,40,.76);box-shadow:var(--shadow);font-size:12px}.side.left{left:0;text-align:left}.side.right{right:0;text-align:right}.side h3{color:var(--cyan);font-size:13px;line-height:1.1;text-transform:uppercase}.side b{display:block;color:white;font-size:24px;margin:4px 0}.side p{color:var(--muted);font-size:11px}.intro{margin:24px auto 28px;border:1px solid var(--line);border-radius:22px;background:rgba(10,31,45,.72);box-shadow:var(--shadow);padding:24px;color:var(--muted);text-align:center}.intro b{color:white}.tags{color:var(--cyan);font-weight:800;letter-spacing:.08em}.chat{padding:24px;border-radius:28px;margin-top:28px;background:linear-gradient(180deg,rgba(36,50,97,.55),rgba(8,25,42,.82))}.chat h2{text-align:center;font-size:clamp(28px,6vw,42px);letter-spacing:.18em}.chat .sub{text-align:center;color:var(--muted);font-size:11px;letter-spacing:.24em;margin-bottom:18px}.screen{min-height:190px;max-height:360px;overflow:auto;border-radius:22px;background:rgba(5,15,31,.74);border:1px solid rgba(143,247,255,.16);padding:22px;color:#dff7ff;margin-bottom:16px}.msg{margin-bottom:12px}.msg.user{text-align:right;color:var(--gold)}textarea{width:100%;min-height:96px;border-radius:22px;border:1px solid var(--line);background:rgba(3,16,27,.88);color:var(--text);padding:18px;font-size:17px;outline:none;resize:vertical}button{border:1px solid var(--line);background:linear-gradient(135deg,rgba(49,231,255,.35),rgba(91,88,180,.35));color:white;border-radius:999px;padding:13px 18px;font-weight:800;cursor:pointer;box-shadow:var(--shadow);touch-action:manipulation}.send{margin-top:10px;width:58px;height:48px;padding:0}.buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.utility{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.utility button{font-size:13px}.log{margin:20px 0;border-radius:12px;border-left:3px solid var(--cyan);background:rgba(0,0,0,.35);padding:12px 18px;color:var(--cyan);font-family:monospace;font-size:12px}.tech{padding:24px;margin-top:20px;text-align:center}.tech h2{color:var(--cyan);letter-spacing:.25em;font-size:18px;margin-bottom:14px}.techgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.techitem{padding:18px;border:1px solid rgba(49,231,255,.2);border-radius:16px;background:rgba(49,231,255,.06);color:var(--muted)}.techitem b{display:block;color:white}.dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);width:min(520px,88vw);display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:10px;background:rgba(9,30,42,.82);z-index:5}.dock a{color:white;text-decoration:none;text-align:center;border:1px solid rgba(143,247,255,.18);border-radius:18px;padding:12px 6px;font-size:11px;text-transform:uppercase}.dock a:first-child{background:rgba(49,231,255,.14);color:var(--cyan)}
+    @media(max-width:680px){.status{margin-bottom:68px}.side{position:static;width:100%;margin:10px 0;text-align:center!important}.topgrid{grid-template-columns:1fr}.buttons,.techgrid{grid-template-columns:1fr}.title{letter-spacing:.12em}.wrap{padding-top:16px}.send{width:100%;margin-top:10px}.utility button{flex:1 1 120px}}
   </style>
 </head>
 <body>
@@ -33,7 +33,7 @@
     <section class="status">
       <div><small>CORE</small><strong><span class="green">●</span> ONLINE</strong></div>
       <div><small>UPTIME</small><strong id="uptime">00:00:00</strong></div>
-      <div><small>BUILD</small><strong>V4</strong></div>
+      <div><small>BUILD</small><strong>V4.1</strong></div>
       <div><small>LATENCY</small><strong id="latency">12ms</strong></div>
     </section>
     <section class="hero">
@@ -48,25 +48,134 @@
     <section class="chat" id="nova">
       <h2>💬 NOVA CHAT</h2>
       <div class="sub">ROUND GLASS CORE · REAL API READY</div>
-      <div class="screen" id="screen"><div class="msg">Security நல்லா இருக்கு - strong encryption, regular audits, multi-factor authentication, மற்றும் continuous monitoring. Any specific concern?</div></div>
-      <textarea id="input" placeholder="Ask NOVA..."></textarea>
-      <button class="send" onclick="sendNova()">➤</button>
-      <div class="buttons"><button onclick="quick('/health')">/health</button><button onclick="quick('/model')">/model</button><button onclick="quick('/mission')">/mission</button><button onclick="quick('/guardian')">/guardian</button><button onclick="quick('/rules')">/rules</button><button onclick="quick('/learn')">/learn</button></div>
-      <div class="utility"><button id="auto">🔊 Auto: ON</button><button onclick="speakLast()">🗣 Speak Last</button><button onclick="voice()">🎙 Mic</button><button onclick="stopSpeak()">⏹ Stop</button><button onclick="copyLast()">📋 Copy Last</button><button onclick="copyChat()">📋 Copy Chat</button></div>
+      <div class="screen" id="novaScreen"><div class="msg">Security நல்லா இருக்கு - strong encryption, regular audits, multi-factor authentication, மற்றும் continuous monitoring. Any specific concern?</div></div>
+      <textarea id="novaInput" placeholder="Ask NOVA..."></textarea>
+      <button type="button" class="send" id="sendBtn">➤ Send</button>
+      <div class="buttons">
+        <button type="button" data-quick="/health">/health</button>
+        <button type="button" data-quick="/model">/model</button>
+        <button type="button" data-quick="/mission">/mission</button>
+        <button type="button" data-quick="/guardian">/guardian</button>
+        <button type="button" data-quick="/rules">/rules</button>
+        <button type="button" data-quick="/learn">/learn</button>
+      </div>
+      <div class="utility">
+        <button type="button" id="autoBtn">🔊 Auto: ON</button>
+        <button type="button" id="speakBtn">🗣 Speak Last</button>
+        <button type="button" id="micBtn">🎙 Mic</button>
+        <button type="button" id="stopBtn">⏹ Stop</button>
+        <button type="button" id="copyLastBtn">📋 Copy Last</button>
+        <button type="button" id="copyChatBtn">📋 Copy Chat</button>
+      </div>
     </section>
     <div class="log">&gt; NOVA cinematic interface loaded...</div>
     <section class="tech" id="projects"><h2>✥ TECH STACK ✥</h2><div class="techgrid"><div class="techitem">🐍<b>Python</b>Backend ready</div><div class="techitem">🤖<b>AI Core</b>API bridge ready</div><div class="techitem">🔧<b>Rollback</b>Safe repair design</div></div></section>
   </main>
   <nav class="dock"><a href="#home">🏠<br>Home</a><a href="#nova">💬<br>NOVA</a><a href="#projects">📁<br>Projects</a><a href="https://universedragon14.github.io/" target="_blank">⚙️<br>Expertise</a></nav>
   <script>
-    const start=Date.now();let last='';
-    setInterval(()=>{const s=Math.floor((Date.now()-start)/1000);uptime.textContent=String(Math.floor(s/3600)).padStart(2,'0')+':'+String(Math.floor(s%3600/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');latency.textContent=(10+Math.floor(Math.random()*18))+'ms'},1000);
-    function reply(q){q=q.toLowerCase();if(q.includes('health'))return 'NOVA health: Core online, UI stable, rollback mindset active.';if(q.includes('model'))return 'Model layer: API-ready shell. Static safe mode running now.';if(q.includes('mission'))return 'Mission: help Aslam build real AI, robotics, systems, and useful tools step by step.';if(q.includes('guardian'))return 'Guardian: approval-first actions, no harmful operations, backup before risky change.';if(q.includes('rules'))return 'Rules: ask approval, protect data, keep logs, validate, rollback, then learn.';if(q.includes('learn'))return 'Learning mode: observe pattern, save useful memory, improve next action.';return 'NOVA received: '+q+'. I can turn this into a safe plan, code, or system step.'}
-    function add(t,c=''){screen.innerHTML+='<div class="msg '+c+'">'+t.replace(/[<>&]/g,m=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[m]))+'</div>';screen.scrollTop=screen.scrollHeight;last=t}
-    function sendNova(){const v=input.value.trim();if(!v)return;add(v,'user');input.value='';setTimeout(()=>add(reply(v)),250)}
-    function quick(v){input.value=v;sendNova()}input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendNova()}})
-    function speakLast(){if(!last)return;speechSynthesis.cancel();speechSynthesis.speak(new SpeechSynthesisUtterance(last))}function stopSpeak(){speechSynthesis.cancel()}function copyLast(){navigator.clipboard.writeText(last||'')}function copyChat(){navigator.clipboard.writeText(screen.innerText)}
-    function voice(){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){add('Voice not supported in this browser.');return}const r=new SR();r.lang='en-US';r.onresult=e=>{input.value=e.results[0][0].transcript};r.start()}
+    const $ = (id) => document.getElementById(id);
+    const start = Date.now();
+    let last = '';
+    let autoSpeak = true;
+
+    const safe = (text) => String(text).replace(/[<>&]/g, (m) => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[m]));
+
+    function updateStats(){
+      const s = Math.floor((Date.now() - start) / 1000);
+      const up = String(Math.floor(s / 3600)).padStart(2,'0') + ':' + String(Math.floor((s % 3600) / 60)).padStart(2,'0') + ':' + String(s % 60).padStart(2,'0');
+      const uptimeEl = $('uptime');
+      const latencyEl = $('latency');
+      if (uptimeEl) uptimeEl.textContent = up;
+      if (latencyEl) latencyEl.textContent = (10 + Math.floor(Math.random() * 18)) + 'ms';
+    }
+    setInterval(updateStats, 1000);
+    updateStats();
+
+    function reply(q){
+      const text = String(q).toLowerCase();
+      if(text.includes('health')) return 'NOVA health: Core online, UI stable, mobile buttons fixed, rollback mindset active.';
+      if(text.includes('model')) return 'Model layer: frontend static shell. Real Groq/OpenAI GPT-OSS-120B needs backend /api/chat deploy.';
+      if(text.includes('mission')) return 'Mission: help Aslam build real AI, robotics, systems, and useful tools step by step.';
+      if(text.includes('guardian')) return 'Guardian: approval-first actions, no harmful operations, backup before risky change.';
+      if(text.includes('rules')) return 'Rules: ask approval, protect data, keep logs, validate, rollback, then learn.';
+      if(text.includes('learn')) return 'Learning mode: observe pattern, save useful memory, improve next action.';
+      return 'NOVA received: ' + q + '. I can turn this into a safe plan, code, or system step.';
+    }
+
+    function add(t, c=''){
+      const screen = $('novaScreen');
+      if(!screen) return;
+      const div = document.createElement('div');
+      div.className = 'msg ' + c;
+      div.innerHTML = safe(t);
+      screen.appendChild(div);
+      screen.scrollTop = screen.scrollHeight;
+      last = String(t);
+      if(c !== 'user' && autoSpeak) speakText(last, false);
+    }
+
+    async function sendNova(){
+      const input = $('novaInput');
+      if(!input) return;
+      const v = input.value.trim();
+      if(!v) { add('Type something first bro. Empty input-ku NOVA mind-reading panna mudiyadhu, yet.'); return; }
+      add(v, 'user');
+      input.value = '';
+      setTimeout(() => add(reply(v)), 180);
+    }
+
+    function quick(v){
+      const input = $('novaInput');
+      if(!input) return;
+      input.value = v;
+      sendNova();
+    }
+
+    function speakText(text, manual=true){
+      if(!('speechSynthesis' in window)) { if(manual) add('Speech not supported in this browser.'); return; }
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(String(text));
+      u.lang = 'ta-IN';
+      u.rate = 0.92;
+      window.speechSynthesis.speak(u);
+    }
+
+    function speakLast(){ if(!last) return; speakText(last); }
+    function stopSpeak(){ if('speechSynthesis' in window) window.speechSynthesis.cancel(); }
+
+    async function copyText(text){
+      try{
+        if(navigator.clipboard && window.isSecureContext){ await navigator.clipboard.writeText(text); add('Copied ✅'); }
+        else add('Copy needs HTTPS on iPhone. HTTPS ready aanathukku apram work aagum.');
+      }catch(e){ add('Copy failed. Browser permission drama.'); }
+    }
+    function copyLast(){ copyText(last || ''); }
+    function copyChat(){ const screen = $('novaScreen'); copyText(screen ? screen.innerText : ''); }
+
+    function voice(){
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if(!SR){ add('Voice not supported in this browser.'); return; }
+      if(!window.isSecureContext){ add('Mic needs HTTPS on iPhone. HTTP-la browser mic block pannum.'); return; }
+      const input = $('novaInput');
+      const r = new SR();
+      r.lang = 'en-US';
+      r.onresult = (e) => { if(input) input.value = e.results[0][0].transcript; };
+      r.onerror = () => add('Mic permission failed. Safari being Safari.');
+      r.start();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      $('sendBtn')?.addEventListener('click', sendNova);
+      $('novaInput')?.addEventListener('keydown', (e) => { if(e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); sendNova(); } });
+      document.querySelectorAll('[data-quick]').forEach((btn) => btn.addEventListener('click', () => quick(btn.getAttribute('data-quick'))));
+      $('speakBtn')?.addEventListener('click', speakLast);
+      $('stopBtn')?.addEventListener('click', stopSpeak);
+      $('copyLastBtn')?.addEventListener('click', copyLast);
+      $('copyChatBtn')?.addEventListener('click', copyChat);
+      $('micBtn')?.addEventListener('click', voice);
+      $('autoBtn')?.addEventListener('click', () => { autoSpeak = !autoSpeak; $('autoBtn').textContent = autoSpeak ? '🔊 Auto: ON' : '🔇 Auto: OFF'; if(!autoSpeak) stopSpeak(); });
+      add('Mobile button patch active ✅');
+    });
   </script>
 </body>
 </html>
