@@ -1,4 +1,6 @@
-# OpenWiki Scope Instructions
+# DragonWiki Scope Instructions
+
+DragonWiki is the Universal Dragon documentation identity for this pilot. The upstream OpenWiki engine reads this file and writes documentation under `openwiki/`.
 
 Document only the `UniverseDragon14/universal-dragon-nova-contact-lab` repository.
 
@@ -13,6 +15,12 @@ Create a clear technical wiki for the NOVA Contact Lab codebase, including:
 - configuration requirements using placeholder names only
 - runtime and data flow diagrams grounded in the source
 - public-safe architecture notes for future coding agents
+
+## Naming rules
+
+- Use `DragonWiki` as the documentation product title.
+- Keep `OpenWiki` only where referring accurately to the upstream engine, npm package, configuration format, or required `openwiki/` path.
+- Do not rename this product to Novakutty, NOVA Wiki, or EVE Wiki.
 
 ## Hard boundaries
 
