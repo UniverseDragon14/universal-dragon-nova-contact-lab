@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+TOOLS_DIR="${OPENWIKI_TOOLS_DIR:-$HOME/.local/openwiki-pilot-tools}"
+ENGINE_BIN="$TOOLS_DIR/node_modules/.bin/openwiki"
+ENGINE_PACKAGE="$TOOLS_DIR/node_modules/openwiki/package.json"
+
+print_banner() {
+  cat <<'BANNER'
+
+DRAGONWIKI
+Universal Dragon documentation pilot
+Scope: NOVA Contact Lab only
+Engine: OpenWiki
+
+BANNER
+}
+
+case "${1:-}" in
+  --version|version)
+    print_banner
+    printf 'DragonWiki wrapper: v0.1.0\n'
+    if [[ -f "$ENGINE_PACKAGE" ]]; then
+      ENGINE_VERSION="$(node -p "require(process.argv[1]).version" "$ENGINE_PACKAGE")"
+      printf 'OpenWiki engine: v%s\n' "$ENGINE_VERSION"
+    else
+      printf 'OpenWiki engine: not found at %s\n' "$TOOLS_DIR"
+      exit 1
+    fi
+    exit 0
+    ;;
+  doctor)
+    print_banner
+    printf 'Repository: %s\n' "$REPO_ROOT"
+    printf 'Branch: %s\n' "$(git -C "$REPO_ROOT" branch --show-current)"
+    printf 'Engine path: %s\n' "$ENGINE_BIN"
+    test -x "$ENGINE_BIN"
+    test "$(git -C "$REPO_ROOT" branch --show-current)" = "docs/openwiki-pilot"
+    printf 'Protected QBIT NOVA repositories touched: NO\n'
+    printf 'Protected Novakutty systems touched: NO\n'
+    printf 'DragonWiki doctor: PASS\n'
+    exit 0
+    ;;
+esac
+
+if [[ ! -x "$ENGINE_BIN" ]]; then
+  printf 'DragonWiki error: OpenWiki engine not found at %s\n' "$ENGINE_BIN" >&2
+  printf 'Install it only in the isolated tools directory before continuing.\n' >&2
+  exit 1
+fi
+
+cd "$REPO_ROOT"
+print_banner
+exec "$ENGINE_BIN" "$@"
