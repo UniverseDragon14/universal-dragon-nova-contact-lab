@@ -1,0 +1,49 @@
+# OpenWiki pilot exclusions for Universal Dragon NOVA Contact Lab
+# Keep secrets, generated output, logs, backups, and unrelated protected projects out of documentation runs.
+
+# Credentials and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+
+# Dependencies and generated output
+node_modules/
+.next/
+dist/
+build/
+coverage/
+.cache/
+.tmp/
+tmp/
+temp/
+
+# Runtime data and logs
+*.log
+logs/
+runtime/
+data/private/
+
+# Backups and archives
+backup/
+backups/
+backup-*/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Protected or unrelated Universal Dragon project paths
+qbit-nova-c/
+qbit-nova-native/
+qbit-nova-*/
+novakutty/
+novakutty-*/
+
+# Repository internals
+.git/
