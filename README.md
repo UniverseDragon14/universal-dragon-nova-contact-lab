@@ -1,25 +1,32 @@
-# Universal Dragon NOVA Contact Lab | Universal Dragon Aslam
+# Universal Dragon NOVA Contact Lab
 
-Universal Dragon NOVA Contact Lab is part of the Universal Dragon public project family by Aslam.
+A mobile-friendly cinematic NOVA interface built as a static single-page site.
 
-Creator: Aslam  
-Project Identity: Universal Dragon  
-Core Identity: NOVA / EVE  
-GitHub: https://github.com/UniverseDragon14  
-Website: https://universaldragon.com
+## Implemented behavior
 
-## NOVA Contact Lab
+- chat-style browser UI
+- deterministic keyword-based local replies
+- browser speech recognition when supported
+- browser text-to-speech
+- copy-chat and speech controls
+- responsive status, project, and technology panels
+- static-site deployment workflow
 
-This repository supports the Universal Dragon / NOVA / EVE direction with public experimentation around contact, communication, assistant behavior, AI workflows, and practical system design.
+The displayed latency is generated in the browser for presentation. Chat replies are local JavaScript rules; the current page does not call a remote AI model.
 
-Keywords: Universal Dragon, Universal Dragon Aslam, Aslam, NOVA, EVE, UDOS, NOVA Contact Lab, AI, assistant system, automation, Raspberry Pi, robotics, system design.
+## Run locally
 
-## Run Locally
+~~~bash
+npm install
+npm run dev
+~~~
 
-**Prerequisites:** Node.js
+A simple static server also works for the current HTML entry point.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in `.env.local` to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Browser support
+
+Speech recognition support varies by browser and may require microphone permission. Text-to-speech uses the browser speech-synthesis API.
+
+## Current boundary
+
+The package lists AI and React-related dependencies, but the current default page is a standalone static interface. There is no active NOVA backend, persistent memory, authentication, terminal execution, hardware control, or live Pi telemetry in this repository.
